@@ -1,0 +1,1044 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Bütün elemanlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: poppins;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Progress Bar */
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(to right, #f44336, #ffc371);
+    width: 0%;
+    z-index: 15;
+    transition: width 0.2s ease-out;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+.container {
+    width: 80%;
+    height: 100vh;
+    background: white;
+    box-shadow: 20px 30px 10px rgba(255, 255, 255, 0.7);
+    margin: auto;
+    user-select: none;
+}
+
+/* Navbar */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* Görsel Arama */
+.imgSearchCard {
+    width: 300px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+    transition: .5s ease;
+    position: absolute;
+    top: -450px;
+    left: 46%;
+}
+
+.imgSearchCard h1 {
+    font-weight: 500;
+    color: #000;
+}
+
+.imgSearchCard img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.imgSearchCard label {
+    display: block;
+    width: 200px;
+    background: #f68a83;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    transition: .5s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.imgSearchCard label:hover {
+    background: #f44336;
+}
+
+.imgSearchCard input {
+    display: none;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+.search input {
+    padding: 10px;
+    width: 400px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all 1s;
+    background: #ddd;
+}
+
+.search input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: poppins, sans-serif;
+    color: black;
+}
+
+.logo {
+    font-size: 50px;
+    font-family: poppins, sans-serif;
+    cursor: pointer;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* Menü */
+.link li {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.link li:hover {
+    color: #f44336;
+}
+
+.link i {
+    margin-right: 7px;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* Markalar */
+.markalar {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.markalar img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    margin-top: 25px;
+    transition: all .3s;
+}
+
+.markalar img:hover {
+    border: 1px solid rgb(255, 85, 0);
+}
+
+.markalar span {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all .3s;
+    font-family: poppins, sans-serif;
+}
+
+.markalar img:hover span {
+    color: rgb(255, 85, 0);
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* Form Sayfası */
+
+/* İnputları ve Textleri İçeren Bölüm */
+.form-box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    display: none;
+}
+
+.form-box .form {
+    width: 90%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background: #fff;
+    padding: 40px 50px 60px;
+    text-align: center;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.form-box h1 {
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: #f44336;
+    position: relative;
+    transition: all 0.5 ease;
+    font-weight: bold;
+}
+
+.form-box h1::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #f44336;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-group {
+    height: 300px;
+}
+
+.input-field {
+    background: #eaeaea;
+    margin: 10px 0;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+.input-field input {
+    width: 300px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+}
+
+.input-field i {
+    margin-left: 15px;
+    color: #999;
+}
+
+.form-box form p {
+    text-align: left;
+    font-size: 13px;
+    visibility: hidden;
+    margin-top: 10%
+}
+
+.form-box form p a {
+    text-decoration: none;
+    color: #f44336;
+}
+
+/* Buton Alanı */
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button {
+    flex-basis: 48%;
+    background: #f44336;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.7s;
+}
+
+.btn-field button:hover {
+    background: #f68a83;
+}
+
+.btn-field button.disable {
+    background: #eaeaea;
+    color: #555;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* FAVORİLER */
+
+.favori {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    left: -5000px;
+    top: 0;
+    background: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+    transition: all .8s cubic-bezier(0.59, -0.25, 0.35, 0.98);
+    z-index: 4;
+    overflow-y: scroll;
+}
+
+.favori .favBos,
+.sepet .sepetBos {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.favori::-webkit-scrollbar {
+    width: 0;
+}
+
+.fav-icerik,
+.sepet-icerik {
+    width: 100%;
+}
+
+.fav-icerik .favCard {
+    width: 85%;
+    margin: 25px auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.fav-icerik .left {
+    width: 40%;
+}
+
+.fav-icerik .left img {
+    width: 200px;
+}
+
+.fav-icerik .right {
+    width: 50%;
+}
+
+.fav-icerik .right h2 {
+    font-size: 30px;
+}
+
+.fav-icerik .right .price {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f68a83;
+}
+
+.fav-icerik .right button {
+    border: 1px solid #f68a83;
+    color: #f68a83;
+    outline: none;
+    border-radius: 5px;
+    width: 85%;
+    padding: 5px;
+    margin-top: 15px;
+    font-size: 20px;
+    background: transparent;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.fav-icerik .right button:hover {
+    background: #f68a83;
+    color: #fff;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* SEPETİM */
+
+.sepet {
+    width: 50%;
+    height: calc(100vh - 100px);
+    position: fixed;
+    right: -5000px;
+    top: 0;
+    background: #fff;
+    border-top-left-radius: 20px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+    transition: all .8s cubic-bezier(0.59, -0.25, 0.35, 0.98);
+    z-index: 10;
+    overflow-y: scroll;
+}
+
+.sepet::-webkit-scrollbar,
+.payment-sepet::-webkit-scrollbar {
+    width: 0;
+}
+
+.geri {
+    width: 100px;
+    font-size: 40px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sepetCard {
+    width: 85%;
+    margin: 10px auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    user-select: none;
+}
+
+.sepetCard .left {
+    width: 30%;
+}
+
+.sepetCard .left img {
+    width: 150px;
+}
+
+.sepetCard .right {
+    width: 55%;
+}
+
+.sepetCard .right h2 {
+    font-size: 20px;
+}
+
+.sepetCard .right .sepetAdet {
+    width: 120px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.sepetCard .right .sepetAdet span {
+    color: #f68a83;
+    font-weight: bold;
+}
+
+
+.sepetCard .right .price {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f68a83;
+    float: right;
+}
+
+.sepet-icerik .sepetBitir {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    right: -5000px;
+    z-index: 5;
+    background: #fff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    transition: all .8s cubic-bezier(0.59, -0.25, 0.35, 0.98);
+}
+
+.sepet-icerik .sepetBitir a {
+    border: none;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    width: 45%;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    background: #ef721f;
+    transition: .2s;
+}
+
+.sepet-icerik .sepetBitir .toplam {
+    color: #ef721f;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.sepet-icerik .sepetBitir h3 {
+    font-size: 25px;
+}
+
+/* ------------------------------------------------- */
+
+/* ÜRÜNLER */
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    margin-top: 30px;
+}
+
+.product-container .product {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #fff;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    outline: 1px solid #ccc;
+    outline-offset: -.9rem;
+    cursor: pointer;
+    transition: .3s;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+}
+
+.product-container .product:hover {
+    outline: .2rem solid #333;
+    outline-offset: 0;
+}
+
+.product-container .product img {
+    height: 20rem;
+    transition: .6s;
+    transform: scale(1.1);
+    margin: 25px 0;
+}
+
+.product-container .product:hover img {
+    transform: scale(1);
+}
+
+.product-container .product h3 {
+    font-size: 16px;
+    color: #444;
+    transition: .3s;
+    margin-top: 10px;
+}
+
+.product-container .product:hover h3 {
+    color: #27ae60;
+}
+
+.product-container .product .price {
+    font-size: 16px;
+    color: #444;
+}
+
+.product-container .product .action {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.product-container .product .action li {
+    position: relative;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    cursor: pointer;
+    transition: .2s;
+    z-index: 1;
+    transform: translateX(60px);
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.product-container .product .action li:hover {
+    color: #fff;
+    background: #f68a83;
+}
+
+.product:hover .action li {
+    transform: translateX(0px);
+}
+
+.product-container .product .action li:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.product-container .product .action li:nth-child(3) {
+    transition-delay: 0.20s;
+}
+
+.product-container .product .action li span {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translate(-20px, -50%);
+    white-space: nowrap;
+    padding: 4px 6px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    transition: .5s;
+    opacity: 0;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.product-container .product .action li:hover span {
+    transform: translate(0px, -50%);
+    opacity: 1;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* Ürün Detay */
+
+.product-details {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: -10000px;
+    top: 0;
+    background: #fff;
+    transition: all .9s cubic-bezier(1, -1.22, 0, 0.95);
+    z-index: 12;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    user-select: text;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-details::-webkit-scrollbar {
+    width: 0;
+}
+
+.details {
+    width: 80%;
+    height: calc(100vh - 120px);
+    margin: 2rem 0;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+    border-radius: 3px;
+    column-gap: 10px;
+}
+
+.details .right {
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.img-container img {
+    width: 60%;
+    border-radius: 20px;
+    margin: 0 auto;
+    object-fit: cover;
+    transform: translateX(33%);
+}
+
+.hover-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.hover-container div {
+    border: 2px solid rgba(252, 160, 175, 0.7);
+    padding: 1rem;
+    border-radius: 3px;
+    margin: 0 4px 8px 4px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    border-color: rgb(255, 145, 163) !important;
+}
+
+.hover-container div:hover {
+    border-color: rgb(255, 145, 163);
+}
+
+.hover-container div img {
+    width: 60px;
+    cursor: pointer;
+}
+
+.details .right span {
+    display: block;
+}
+
+.product-name {
+    font-size: 26px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 24px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.product-rating span {
+    margin-right: 6px;
+}
+
+.product-description {
+    font-weight: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 22px;
+}
+
+.details .btn-groups {
+    margin-top: 22px;
+}
+
+.details .btn-groups button {
+    display: inline-block;
+    font-size: 16px;
+    font-family: 100%;
+    text-transform: uppercase;
+    padding: 15px 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.details .btn-groups button .fa {
+    margin-right: 8px;
+}
+
+.details .add-cart-btn {
+    background-color: #FF9F00;
+    border: 2px solid #FF9F00;
+    margin-right: 8px;
+}
+
+.details .add-cart-btn:hover {
+    background-color: #fff;
+    color: #FF9F00;
+}
+
+.details .buy-now-btn {
+    background-color: #000;
+    border: 2px solid #000;
+}
+
+.details .buy-now-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .row {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer .row .nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .nav2 img {
+    width: 70px;
+}
+
+footer .row .nav3 {
+    transform: translateX(-20px);
+}
+
+footer .nav3 img {
+    width: 150px;
+}
+
+/* Geri Butonu */
+.back-btn {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    transition: all 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.line {
+    width: 35px;
+    height: 3px;
+    display: block;
+    background-color: #000;
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: all 350ms;
+}
+
+.back-btn .line:nth-child(1) {
+    transform: translate(-8px, 6px) rotate(-35deg);
+    width: 25px;
+    background-color: #000;
+}
+
+.back-btn .line:nth-child(3) {
+    transform: translate(-8px, -6px) rotate(35deg);
+    width: 25px;
+    background-color: #000;
+}
+
+.back-btn:hover .line:nth-child(1) {
+    transform: translateY(13px) rotate(-45deg);
+    background-color: #000;
+}
+
+.back-btn:hover .line:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+    background-color: #000;
+}
+
+.back-btn:hover .line:nth-child(2) {
+    opacity: 0;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* ISKELETON YÜKLEMESİ */
+
+.skeleton {
+    position: relative;
+}
+
+.skeleton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(90deg, #ccc, #f9f9f9, #ccc);
+    background-size: 200%;
+    animation: skeleton 2s linear infinite reverse;
+}
+
+.skeletonİmg {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.skeletonİmg::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background: linear-gradient(90deg, #ccc, #f9f9f9, #ccc);
+    background-size: 200%;
+    animation: skeleton 2s linear infinite reverse;
+}
+
+.skeleton-text {
+    width: 100%;
+    height: 22px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+}
+
+.skeleton-text:last-child {
+    width: 72%;
+    margin: auto;
+}
+
+.skeleton:first-child {
+    width: 85%;
+    margin: auto;
+}
+
+@keyframes skeleton {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* CANLI DESTEK */
+
+.liveSupport {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    position: fixed;
+    bottom: 15px;
+    right: 25px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.liveSupport i {
+    font-size: 60px;
+    color: #27ae60;
+}
+
+.liveSupport span {
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    transform: translate(-20px, -50%);
+    white-space: nowrap;
+    padding: 4px 6px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    transition: .5s;
+    opacity: 0;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.liveSupport:hover span {
+    transform: translate(0px, -50%);
+    opacity: 1;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+

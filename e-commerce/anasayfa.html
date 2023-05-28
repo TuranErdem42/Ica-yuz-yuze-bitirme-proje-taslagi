@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>E-commers</title>
+  </head>
+  <body>
+    <!-- Canlı Destek -->
+    <div class="liveSupport">
+      <i class="fa fa-whatsapp"></i>
+      <span>Canlı Destek</span>
+    </div>
+
+   
+
+    <div class="container" id="ana">
+      <!-- Header -->
+      <header>
+        <div class="logo">LOGO</div>
+
+        <div class="search">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Aradığınız bir şey var mıydı?"
+          />
+        </div>
+
+        <div class="link">
+          <ul>
+            <li onclick="imgSearchCardShow()">
+              <i class="fa fa-file-image-o"></i>Görsel Arama
+            </li>
+            <li onclick="favorilerShow()">
+              <i class="fa fa-heart"></i>Favoriler
+            </li>
+            <li onclick="sepetimShow()">
+              <i class="fa fa-shopping-basket"></i>Sepetim
+            </li>
+            <li class="adSoyad" onclick="uyelik()">
+              <i class="fa fa-user"></i>Giriş Yap
+            </li>
+          </ul>
+
+          <div class="imgSearchCard">
+            <i class="fa fa-times" onclick="imgSearchCardHide()"></i>
+            <h1>Görsel Ara</h1>
+            <img src="img/imgSearch.png" alt="" id="searchİmg" />
+            <label for="inputFile">Görsel Yükle</label>
+            <input
+              type="file"
+              accept="image/jpeg, image/png, image/jpg, image/webp"
+              id="inputFile"
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- Marka Kutusu -->
+      <div class="markalar"></div>
+
+      <!-- Product Box -->
+      <div class="product-container"></div>
+
+      <!-- Product Detay -->
+      <div class="product-details">
+        <div onclick="detailsHide()" class="geri">
+          <button class="back-btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
+
+        <div class="details">
+          <div class="left">
+            <div class="img-container">
+              <img src="img/product1.webp" class="detailsİmg" alt="" />
+            </div>
+            <div class="hover-container">
+              <div><img src="img/product1.webp" class="detailsİmg" /></div>
+              <div><img src="img/product2.webp" class="slider1" /></div>
+              <div><img src="img/product3.webp" class="slider2" /></div>
+            </div>
+          </div>
+          <div class="right">
+            <span class="product-name">(New) Analog Watch - For Men</span>
+            <span class="product-price">$ 50.25</span>
+            <div class="product-rating">
+              <span><i class="fa fa-star"></i></span>
+              <span><i class="fa fa-star"></i></span>
+              <span><i class="fa fa-star"></i></span>
+              <span><i class="fa fa-star"></i></span>
+              <span><i class="fa fa-star-half"></i></span>
+              <span>(350 ratings)</span>
+            </div>
+            <p class="product-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
+              animi ad minima veritatis dolore. Architecto facere dignissimos
+              voluptate fugit ratione molestias quis quidem exercitationem
+              voluptas.
+            </p>
+            <div class="btn-groups">
+              <button type="button" onclick="sepeteEkle()" class="add-cart-btn">
+                <i class="fa fa-shopping-cart"></i>Sepete Ekle
+              </button>
+              <button type="button" class="buy-now-btn">
+                <i class="fa fa-money"></i>Şimdi Al
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="py-5 mt-5" style="display: none">
+        <div class="row">
+          <div class="col-4 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="p-0 text-body-secondary">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-4 col-md-2 mb-3">
+            <h5>Güvenli Alışveriş</h5>
+            <ul class="nav2">
+              <li class="nav-item mb-2">
+                <img src="img/troy-logo-transparent.png" alt="" />
+              </li>
+              <li class="nav-item mb-2">
+                <img src="img/footer-master-card.png" alt="" />
+              </li>
+              <li class="nav-item mb-2">
+                <img src="img/footer-visa-black.png" alt="" />
+              </li>
+              <li class="nav-item mb-2">
+                <img src="img/footer-amex.png" alt="" />
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-4 col-md-2 mb-3">
+            <h5>Mobil Uygulamalarımız</h5>
+            <ul class="nav3">
+              <li class="nav-item mb-2"><img src="img/google.svg" alt="" /></li>
+              <li class="nav-item mb-2"><img src="img/apple.svg" alt="" /></li>
+              <li class="nav-item mb-2"><img src="img/huawei.svg" alt="" /></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+          <button class="bg-dark"><a href="#ana">Yukarı Çık</a></button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- FAVORİLER -->
+
+    <div class="favori">
+      <div onclick="favorilerHide()" class="geri">
+        <button class="back-btn">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+      <div class="fav-icerik">
+        <p class="favBos">Herhangi Bir Ürün Eklemediniz</p>
+      </div>
+    </div>
+
+    <!-- SEPETİM -->
+
+    <div class="sepet">
+      <div onclick="sepetimHide()" class="geri">
+        <button class="back-btn">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+      <div class="sepet-icerik">
+        <p class="sepetBos">Herhangi Bir Ürün Eklemediniz</p>
+        <div class="sepetBitir">
+          <div>
+            <h3>Toplam :</h3>
+            <div class="toplam"></div>
+          </div>
+          <a target="_blank" href="payment.html">Sepeti Onayla</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div onclick="formHide()" class="geri">
+        <i class="fa fa-times"></i>
+      </div>
+      <form class="form">
+        <h1 id="title">Kaydol</h1>
+        <div class="input-group">
+          <div class="input-field" id="isimField">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="İsim" class="input" />
+          </div>
+
+          <div class="input-field">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="E-mail" class="input" required />
+          </div>
+
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Şifre" class="input" />
+          </div>
+          <p id="sifre">Şifremi Unuttum! <a href="#">Buraya Tıklayın</a></p>
+        </div>
+        <div class="btn-field">
+          <button type="submit" id="kaydolBtn">Kaydol</button>
+          <button type="submit" id="girisBtn" class="disable">Giriş Yap</button>
+        </div>
+      </form>
+    </div>
+    <div id="progressBar"></div>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
